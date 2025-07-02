@@ -1,0 +1,196 @@
+<nav class="navbar navbar-expand-lg fixed-top cistom-navbar">
+    <!-- TEAM LOGO AND NAME-->
+    <a class="navbar-brand" href="{{ url_for['home']}}">
+        <img
+            src="#"
+            alt=""
+            class="navbar-logo"
+        />
+    </a>
+
+    <!--Small screen menu toggle button-->
+    <button
+    class="navbar-toggler"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="navbarNav"
+    aria-controls="navbarNav"
+    aria-expanded="false"
+    aria-labe="Toggle navigation"
+    ><span class="navbar-toggler-icon"></span></button>
+
+    <!--Navbar Links-->
+    <div class="collapse navbar-collapse justify-contnet-end" id="navbarNav">
+        <ul class="navbar-nav">
+            <!--Home-->
+            <li class="nav-item">
+                <a class="nav-link" href="{{url_for['home']}}">Home</a>
+            </li>
+
+            <!--Project Dropdown-->
+            <li class="nav-item dropdown">
+                <a
+                class="nav-link droddown-toggle"
+                href="#"
+                id="navbarDropdownProject"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                >Project</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownProject">
+                    <li>
+                        <a
+                        class="dropdown-item"
+                        href="[[url_for['pages', page='description']]]">Description</a>
+                    </li>
+                    <li>
+                        <a
+                        class="dropdown-item"
+                        href="[[url_for['pages', page='contribution']]]">Contribution</a>
+                    </li>
+                    <li>
+                        <a
+                        class="dropdown-item"
+                        href="[[url_for['pages', page='engeneering']]]">Engeneering</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdownWetlab"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                >Wet Lab</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownWetlab">
+                    <li>
+                        <a
+                        class="dropdown-item"
+                        href="{{url_for['pages', page='design']}}">Design</a>
+                    </li>
+                    <li>
+                        <a
+                        class="dropdown-item"
+                        href="{{url_for['pages', page='results']}}">Results</a>
+                    </li>
+                    <li>
+                        <a
+                        class="dropdown-item"
+                        href="{{url_for['pages', page='parts']}}">Parts</a>
+                    </li>
+                    <li>
+                        <a
+                        class="dropdown-item"
+                        href="{{url_for['pages', page='experiments']}}">Experiments</a>
+                    </li>
+                    <li>
+                        <a
+                        class="dropdown-item"
+                        href="{{url_for['pages', page='notebook']}}">Notebook</a>
+                    </li>
+                </ul>
+            </li>
+            <!--DryLab Dropdown-->
+            <li class="nav-item dropdown">
+                <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdownDrylab"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                >Dry Lab</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownDrylab">
+                    <li>
+                        <a
+                        class="dropdoown-item"
+                        href="{{url_for['pages', page='model']}}">Model</a>
+                    </li>
+                    <li>
+                        <a
+                        class="dropdoown-item"
+                        href="{{url_for['pages', page='software']}}">Software</a>
+                    </li>
+                    <li>
+                        <a
+                        class="dropdoown-item"
+                        href="{{url_for['pages', page='hardware']}}">Hardware</a>
+                    </li>
+
+                </ul>
+
+            </li>
+            <!--Human Practicfes Dropdown-->
+            <li class="nav-item dropdown">
+                <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdownHumanpractices"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                >Human Practices</a>
+                <ul
+                class="dropdown-menu"
+                aria-labelledby="navbarDropdownHumanpractices">
+                </ul>
+                    <li>
+                        <a 
+                        class="dropdown-item"
+                        href="{{url_for['pages', page=human-practices]}}">Integrated Human Practices</a>
+                    </li>
+                    <li>
+                        <a 
+                        class="dropdown-item"
+                        href="{{url_for['pages', page=education]}}">Education</a>
+                    </li>
+                    
+
+            </li>
+            <!--Team Dropdown-->
+            <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdownTeam"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Team
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownTeam">
+            <li>
+              <a
+                class="dropdown-item"
+                href="{{ url_for('pages', page='team') }}"
+                >Team Members</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                href="{{ url_for('pages', page='attributions') }}"
+                >Attributions</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item"
+                href="{{ url_for('pages', page='sponsors') }}"
+                >Sponsors</a
+              >
+            </li>
+          </ul>
+        </li>
+
+
+
+        </ul>
+    </div>        
+</nav>
+
+<!--Bootstrap S JS Bundle (includes Popper.js)-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
